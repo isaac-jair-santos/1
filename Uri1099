@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class Uri1099 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int entrada = scanner.nextInt();
+
+        for (int i = 0; i < entrada; i++) {
+
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            int suma = 0;
+
+            if (x > y) {
+
+                for (int b = (y + 1); b < x; b++) {
+
+                    if (b % 2 != 0) {
+
+                        suma += b;
+
+                    }
+
+                }
+
+                System.out.println(suma);
+                suma = 0;
+            }
+
+            if (x < y) {
+
+                for (int c = (x + 1); c < y; c++) {
+
+                    if (c % 2 != 0) {
+
+                        suma += c;
+                    }
+                }
+
+                System.out.println(suma);
+                suma = 0;
+            }
+
+            if (x == y){
+                System.out.println(suma);
+            }
+        }
+        scanner.close();
+    }
+}
